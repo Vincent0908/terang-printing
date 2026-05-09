@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terang Printing - Kontak</title>
+  <meta name="description" content="Hubungi Terang Printing - formulir kontak, alamat, jam operasional, dan lokasi kami." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGASI ===== -->
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="Logo Terang Printing" />
+      <h1>Terang Printing</h1>
+    </div>
+
+    <nav aria-label="Navigasi Utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="kontak.html" aria-current="page">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section aria-labelledby="page-title">
+      <h2 id="page-title">Hubungi Kami</h2>
+      <p>Kami siap membantu Anda. Kirim pesan, telepon, atau kunjungi toko kami langsung.</p>
+    </section>
+
+    <!-- ===== INFORMASI KONTAK ===== -->
+    <section aria-labelledby="info-kontak-heading">
+      <h2 id="info-kontak-heading">Informasi Kontak</h2>
+
+      <address>
+        <dl>
+          <dt>Alamat</dt>
+          <dd>Jl. [Nama Jalan No. XX], [Kelurahan], [Kecamatan], Medan, Sumatera Utara</dd>
+
+          <dt>Telepon</dt>
+          <dd><a href="tel:+6281234567890">0812-3456-7890</a></dd>
+
+          <dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">0812-3456-7890 (Chat via WhatsApp)</a></dd>
+
+          <dt>Email</dt>
+          <dd><a href="mailto:terangprinting@email.com">terangprinting@email.com</a></dd>
+
+          <dt>Instagram</dt>
+          <dd><a href="https://instagram.com/terangprinting" target="_blank" rel="noopener noreferrer">@terangprinting</a></dd>
+        </dl>
+      </address>
+    </section>
+
+    <!-- ===== JAM OPERASIONAL ===== -->
+    <section aria-labelledby="jam-heading">
+      <h2 id="jam-heading">Jam Operasional</h2>
+      <table>
+        <caption>Jadwal Buka Toko Terang Printing</caption>
+        <thead>
+          <tr>
+            <th scope="col">Hari</th>
+            <th scope="col">Jam Buka</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Senin – Jumat</td>
+            <td>08.00 – 21.00 WIB</td>
+          </tr>
+          <tr>
+            <td>Sabtu</td>
+            <td>08.00 – 20.00 WIB</td>
+          </tr>
+          <tr>
+            <td>Minggu &amp; Hari Libur</td>
+            <td>09.00 – 17.00 WIB</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== FORMULIR KONTAK ===== -->
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Kirim Pesan</h2>
+      <p>Isi formulir di bawah ini dan kami akan segera merespons pesan Anda.</p>
+
+      <form action="#" method="POST" novalidate>
+
+        <fieldset>
+          <legend>Data Diri</legend>
+
+          <div>
+            <label for="nama">Nama Lengkap <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              autocomplete="name"
+              required
+              placeholder="Masukkan nama lengkap Anda"
+            />
+          </div>
+
+          <div>
+            <label for="email">Alamat Email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="contoh@email.com"
+            />
+          </div>
+
+          <div>
+            <label for="telepon">Nomor Telepon / WhatsApp</label>
+            <input
+              type="tel"
+              id="telepon"
+              name="telepon"
+              autocomplete="tel"
+              placeholder="08xx-xxxx-xxxx"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detail Pesan</legend>
+
+          <div>
+            <label for="keperluan">Keperluan / Layanan yang Diminati <span aria-hidden="true">*</span></label>
+            <select id="keperluan" name="keperluan" required>
+              <option value="" disabled selected>-- Pilih Keperluan --</option>
+              <option value="cetak-skripsi">Cetak Skripsi / Karya Tulis</option>
+              <option value="spanduk">Cetak Spanduk / Banner</option>
+              <option value="print-fotokopi">Print &amp; Fotokopi</option>
+              <option value="undangan">Undangan &amp; Kartu</option>
+              <option value="atk">Pembelian ATK</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="pesan">Pesan / Keterangan <span aria-hidden="true">*</span></label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="6"
+              required
+              placeholder="Tuliskan detail kebutuhan Anda di sini..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Kirim Pesan</button>
+
+      </form>
+    </section>
+
+    <!-- ===== PETA / LOKASI ===== -->
+    <section aria-labelledby="peta-heading">
+      <h2 id="peta-heading">Lokasi Kami</h2>
+      <p>Temukan kami di Google Maps atau kunjungi langsung toko kami.</p>
+
+      <!-- Embed Google Maps iframe ditempatkan di sini -->
+      <div role="region" aria-label="Peta Lokasi Terang Printing">
+        <!-- <iframe src="GOOGLE_MAPS_EMBED_URL" ... ></iframe> -->
+        <p>[Embed Google Maps akan ditampilkan di sini]</p>
+      </div>
+
+      <a href="https://maps.google.com/?q=[alamat]" target="_blank" rel="noopener noreferrer">
+        Buka di Google Maps
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Terang Printing. Semua hak dilindungi.</p>
+    <address>
+      Jl. [Nama Jalan], Medan, Sumatera Utara<br />
+      Telp: <a href="tel:+6281234567890">0812-3456-7890</a><br />
+      Email: <a href="mailto:terangprinting@email.com">terangprinting@email.com</a>
+    </address>
+    <nav aria-label="Navigasi Footer">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
