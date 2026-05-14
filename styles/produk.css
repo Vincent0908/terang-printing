@@ -1,0 +1,36 @@
+/* ========================================
+   PRODUK.CSS - Style khusus halaman PRODUK
+   Berisi: filter kategori produk
+======================================== */
+
+
+/* ===================================================
+   FILTER NAVIGASI (KATEGORI PRODUK)
+   =================================================== */
+nav[aria-label="Filter Kategori Produk"] {
+  text-align: center;
+  padding: 0 5%;
+  margin-bottom: 15px;
+}
+
+nav[aria-label="Filter Kategori Produk"] ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+nav[aria-label="Filter Kategori Produk"] a {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #FFD700;
+  color: #222222;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+nav[aria-label="Filter Kategori Produk"] a:hover {
+  background-color: #222222;
+  color: #FFD700;
+}
