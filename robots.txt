@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://terang-printing.vercel.app/sitemap.xml
