@@ -4,214 +4,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
   <title>Terang Printing - Produk</title>
   <meta name="description"
     content="Katalog produk Terang Printing - ATK, kertas, perlengkapan sekolah dan produk cetak." />
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/produk.css" />
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
 
-  <!-- ===== HEADER / NAVIGASI ===== -->
+  <!-- ===== HEADER ===== -->
   <header>
-    <div class="brand">
-      <img src="logo.png" alt="Logo Terang Printing" />
-      <h1>Terang Printing</h1>
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Logo Terang Printing" />
+        <a href="index.html"><span class="brand-name">Terang <span>Printing</span></span></a>
+      </div>
+      <nav aria-label="Navigasi Utama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+          <li><a href="produk.html" aria-current="page">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav aria-label="Navigasi Utama">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="produk.html" aria-current="page">Produk</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
 
-    <!-- ===== PAGE TITLE ===== -->
-    <section aria-labelledby="page-title">
-      <h2 id="page-title">Katalog Produk</h2>
-      <p>Temukan berbagai produk alat tulis kantor, perlengkapan sekolah, dan produk cetak siap pakai dari Terang
-        Printing.</p>
-    </section>
+    <!-- ===== PAGE BANNER ===== -->
+    <div class="page-banner">
+      <div class="container">
+        <h1>Katalog Produk</h1>
+        <p>Temukan berbagai produk ATK, perlengkapan sekolah, dan produk cetak siap pakai.</p>
+      </div>
+    </div>
 
-    <!-- ===== FILTER / KATEGORI ===== -->
-    <nav aria-label="Filter Kategori Produk">
-      <ul>
-        <li><a href="#atk">Alat Tulis Kantor (ATK)</a></li>
-        <li><a href="#kertas">Kertas &amp; Media Cetak</a></li>
-        <li><a href="#produk-cetak">Produk Cetak Siap Pakai</a></li>
-        <li><a href="#perlengkapan">Perlengkapan Sekolah</a></li>
-      </ul>
-    </nav>
+    <!-- ===== KATALOG ===== -->
+    <section class="section" aria-label="Katalog Produk">
+      <div class="container">
 
-    <!-- ===== KATEGORI: ATK ===== -->
-    <section id="atk" aria-labelledby="atk-heading">
-      <h2 id="atk-heading">Alat Tulis Kantor (ATK)</h2>
+        <!-- Filter Navigasi -->
+        <nav class="produk-nav" aria-label="Filter Kategori Produk">
+          <a href="#atk">Alat Tulis Kantor</a>
+          <a href="#kertas">Kertas &amp; Media Cetak</a>
+          <a href="#produk-cetak">Produk Cetak Siap Pakai</a>
+          <a href="#perlengkapan">Perlengkapan Sekolah</a>
+        </nav>
 
-      <ul>
+        <!-- Kategori: ATK -->
+        <div id="atk">
+          <h2 class="produk-section-title">Alat Tulis Kantor (ATK)</h2>
+          <div class="produk-grid">
 
-        <li>
-          <article>
-            <img src="produk/pulpen.jpg" alt="Pulpen Ballpoint" />
-            <h3>Pulpen Ballpoint</h3>
-            <p>Berbagai merek tersedia: Pilot, Snowman, Stabilo</p>
-            <p><strong>Harga:</strong> Rp 3.000 – Rp 10.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/pulpen.jpg alt=" Pulpen Ballpoint"
+                  onerror="this.style.display='none';this.parentNode.textContent='🖊️'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Pulpen Ballpoint</h3>
+                <p>Merek: Pilot, Snowman, Kenko, dll.</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-        <li>
-          <article>
-            <img src="produk/pensil.jpg" alt="Pensil 2B" />
-            <h3>Pensil 2B</h3>
-            <p>Cocok untuk keperluan ujian dan menggambar teknik</p>
-            <p><strong>Harga:</strong> Rp 2.500 – Rp 5.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/pensil.jpg" alt="Pensil 2B"
+                  onerror="this.style.display='none';this.parentNode.textContent='✏️'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Pensil 2B</h3>
+                <p>Untuk ujian dan menggambar teknik</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-        <li>
-          <article>
-            <img src="produk/stapler.jpg" alt="Stapler" />
-            <h3>Stapler &amp; Isi Stapler</h3>
-            <p>Tersedia berbagai ukuran untuk keperluan kantor</p>
-            <p><strong>Harga:</strong> Rp 15.000 – Rp 50.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/Stapler.jpg" alt="Stapler"
+                  onerror="this.style.display='none';this.parentNode.textContent='📎'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Stapler &amp; Isi Stapler</h3>
+                <p>Berbagai ukuran untuk keperluan kantor</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-        <li>
-          <article>
-            <img src="produk/map.jpg" alt="Map Folder" />
-            <h3>Map &amp; Folder Dokumen</h3>
-            <p>Map plastik, map kertas, dan snelhecter tersedia</p>
-            <p><strong>Harga:</strong> Rp 2.000 – Rp 20.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/map.jpg" alt="Map Folder"
+                  onerror="this.style.display='none';this.parentNode.textContent='📁'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Map &amp; Folder Dokumen</h3>
+                <p>Map plastik, kertas, dan snelhecter</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-      </ul>
-    </section>
+          </div>
+        </div>
 
-    <!-- ===== KATEGORI: KERTAS ===== -->
-    <section id="kertas" aria-labelledby="kertas-heading">
-      <h2 id="kertas-heading">Kertas &amp; Media Cetak</h2>
+        <!-- Kategori: Kertas -->
+        <div id="kertas">
+          <h2 class="produk-section-title">Kertas &amp; Media Cetak</h2>
+          <div class="produk-grid">
 
-      <ul>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/hvs.jpg" alt="Kertas HVS A4"
+                  onerror="this.style.display='none';this.parentNode.textContent='📋'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Kertas HVS A4</h3>
+                <p>70gr &amp; 80gr, per rim (00 lembar)</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-        <li>
-          <article>
-            <img src="produk/hvs.jpg" alt="Kertas HVS" />
-            <h3>Kertas HVS A4</h3>
-            <p>Berat 70gr dan 80gr, tersedia per rim (500 lembar)</p>
-            <p><strong>Harga:</strong> Rp 45.000 – Rp 55.000 / rim</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/foto-paper.jpg" alt="Kertas Foto"
+                  onerror="this.style.display='none';this.parentNode.textContent='🖼️'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Kertas Foto (Photo Paper)</h3>
+                <p>Glossy &amp; matte, ukuran A4 dan 4R</p>
+                <div class="produk-price">Rp 00 – 00 / lembar</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-        <li>
-          <article>
-            <img src="produk/foto-paper.jpg" alt="Kertas Foto" />
-            <h3>Kertas Foto (Photo Paper)</h3>
-            <p>Glossy dan matte, ukuran A4 dan 4R</p>
-            <p><strong>Harga:</strong> Rp 3.000 – Rp 8.000 / lembar</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+          </div>
+        </div>
 
-      </ul>
-    </section>
+        <!-- Kategori: Produk Cetak -->
+        <div id="produk-cetak">
+          <h2 class="produk-section-title">Produk Cetak Siap Pakai</h2>
+          <div class="produk-grid">
 
-    <!-- ===== KATEGORI: PRODUK CETAK SIAP PAKAI ===== -->
-    <section id="produk-cetak" aria-labelledby="produk-cetak-heading">
-      <h2 id="produk-cetak-heading">Produk Cetak Siap Pakai</h2>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/nota.jpg" alt="Buku Nota"
+                  onerror="this.style.display='none';this.parentNode.textContent='🧾'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Buku Nota / Kwitansi</h3>
+                <p>Berbagai ukuran, rangkap 2 dan 3</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-      <ul>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/stiker.jpg" alt="Stiker Label"
+                  onerror="this.style.display='none';this.parentNode.textContent='🏷️'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Stiker Label</h3>
+                <p>Untuk pengiriman dan administrasi</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-        <li>
-          <article>
-            <img src="produk/nota.jpg" alt="Buku Nota" />
-            <h3>Buku Nota / Kwitansi</h3>
-            <p>Tersedia berbagai ukuran, rangkap 2 dan 3</p>
-            <p><strong>Harga:</strong> Rp 10.000 – Rp 30.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+          </div>
+        </div>
 
-        <li>
-          <article>
-            <img src="produk/stiker.jpg" alt="Stiker Label" />
-            <h3>Stiker Label</h3>
-            <p>Stiker label putih untuk keperluan pengiriman dan administrasi</p>
-            <p><strong>Harga:</strong> Rp 5.000 – Rp 25.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
+        <!-- Kategori: Perlengkapan Sekolah -->
+        <div id="perlengkapan">
+          <h2 class="produk-section-title">Perlengkapan Sekolah</h2>
+          <div class="produk-grid">
 
-      </ul>
-    </section>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/buku-tulis.jpg" alt="Buku Tulis"
+                  onerror="this.style.display='none';this.parentNode.textContent='📓'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Buku Tulis</h3>
+                <p>Berbagai merek dan ukuran untuk siswa</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-    <!-- ===== KATEGORI: PERLENGKAPAN SEKOLAH ===== -->
-    <section id="perlengkapan" aria-labelledby="perlengkapan-heading">
-      <h2 id="perlengkapan-heading">Perlengkapan Sekolah</h2>
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/penggaris.jpg" alt="Penggaris"
+                  onerror="this.style.display='none';this.parentNode.textContent='📐'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Penggaris &amp; Jangka</h3>
+                <p>30cm, 60cm, jangka dan busur derajat</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+              </div>
+            </div>
 
-      <ul>
+          </div>
+        </div>
 
-        <li>
-          <article>
-            <img src="produk/buku-tulis.jpg" alt="Buku Tulis" />
-            <h3>Buku Tulis</h3>
-            <p>Berbagai merek dan ukuran untuk kebutuhan siswa</p>
-            <p><strong>Harga:</strong> Rp 3.500 – Rp 8.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
-
-        <li>
-          <article>
-            <img src="produk/penggaris.jpg" alt="Penggaris" />
-            <h3>Penggaris &amp; Jangka</h3>
-            <p>Penggaris 30cm, 60cm, jangka dan busur derajat</p>
-            <p><strong>Harga:</strong> Rp 5.000 – Rp 25.000</p>
-            <a href="kontak.html">Tanya Stok</a>
-          </article>
-        </li>
-
-      </ul>
+      </div>
     </section>
 
     <!-- ===== CTA ===== -->
-    <section aria-labelledby="cta-produk">
-      <h2 id="cta-produk">Produk Tidak Ditemukan?</h2>
-      <p>Hubungi kami untuk menanyakan ketersediaan produk yang Anda butuhkan.</p>
-      <a href="kontak.html">Hubungi Kami</a>
+    <section class="cta-banner" aria-labelledby="cta-produk">
+      <div class="container">
+        <h2 id="cta-produk">Produk Tidak Ditemukan?</h2>
+        <p>Hubungi kami untuk menanyakan ketersediaan produk yang Anda butuhkan.</p>
+        <div class="cta-banner-actions">
+          <a href="kontak.html" class="btn btn-outline">Hubungi Kami</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2026 Terang Printing. Semua hak dilindungi.</p>
-    <address>
-      Jl. Rela No.119, Kec. Medan Tembung, Kota Medan, Sumatera Utara<br />
-      Telp: <a href="tel:+6281234567890">0812-3456-7890</a><br />
-      Email: <a href="mailto:contoh@email.com">contoh@email.com</a>
-    </address>
-    <nav aria-label="Navigasi Footer">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Terang Printing</div>
+          <p class="footer-desc">Solusi cetak dan print terpercaya di Medan, Sumatera Utara. Melayani kebutuhan
+            percetakan dengan kualitas terbaik.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <address>
+            Jl. Rela No.119, Sidorejo, Medan<br />
+            Sumatera Utara<br />
+            <a href="tel:+6281234567890">0812-3456-7890</a><br />
+            <a href="mailto:contoh@gmail.com">contoh@gmail.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Terang Printing.</p>
+      </div>
+    </div>
   </footer>
 
 </body>

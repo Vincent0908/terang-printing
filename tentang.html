@@ -4,175 +4,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
   <title>Terang Printing - Tentang Kami</title>
   <meta name="description"
     content="Tentang Terang Printing - profil, visi misi, dan sejarah percetakan terpercaya di Medan." />
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/tentang.css" />
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
 
-  <!-- ===== HEADER / NAVIGASI ===== -->
+  <!-- ===== HEADER ===== -->
   <header>
-    <div class="brand">
-      <img src="logo.png" alt="Logo Terang Printing" />
-      <h1>Terang Printing</h1>
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Logo Terang Printing" />
+        <a href="index.html"><span class="brand-name">Terang <span>Printing</span></span></a>
+      </div>
+      <nav aria-label="Navigasi Utama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html" aria-current="page">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav aria-label="Navigasi Utama">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html" aria-current="page">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
 
-    <!-- ===== PAGE TITLE ===== -->
-    <section aria-labelledby="page-title">
-      <h2 id="page-title">Tentang Kami</h2>
-      <p>Kenali lebih dekat Terang Printing — siapa kami, apa yang kami perjuangkan, dan bagaimana kami melayani
-        pelanggan.</p>
-    </section>
+    <!-- ===== PAGE BANNER ===== -->
+    <div class="page-banner">
+      <div class="container">
+        <h1>Tentang Kami</h1>
+        <p>Kenali lebih dekat Terang Printing — siapa kami dan bagaimana kami melayani pelanggan.</p>
+      </div>
+    </div>
 
     <!-- ===== PROFIL PERUSAHAAN ===== -->
-    <section aria-labelledby="profil-heading">
-      <h2 id="profil-heading">Profil Perusahaan</h2>
-      <img src="foto-toko.jpg" alt="Foto Toko Terang Printing" />
-      <p>
-        Terang Printing adalah usaha percetakan yang berdiri sejak [tahun berdiri] di Medan, Sumatera Utara.
-        Kami berkomitmen memberikan layanan cetak dan print berkualitas tinggi dengan harga yang terjangkau
-        untuk memenuhi berbagai kebutuhan pelanggan — dari mahasiswa, pelajar, pelaku usaha, hingga instansi.
-      </p>
-      <p>
-        Dengan pengalaman lebih dari [X] tahun di industri percetakan, kami telah melayani ribuan pelanggan
-        dan terus berkembang menghadirkan layanan terbaik.
-      </p>
-    </section>
+    <section class="section" aria-labelledby="profil-heading">
+      <div class="container">
+        <div class="tentang-grid">
 
-    <!-- ===== VISI & MISI ===== -->
-    <section aria-labelledby="visi-misi-heading">
-      <h2 id="visi-misi-heading">Visi &amp; Misi</h2>
+          <div class="tentang-img-wrapper">
+            <div class="tentang-img-box">
+              <!-- Ganti foto-toko.jpg dengan foto toko sebenarnya -->
+              <img src="foto-toko.jpg" alt="Foto Toko Terang Printing" />
+            </div>
+            <div class="tentang-img-badge">
+              <span>10+</span>
+              Tahun Berpengalaman
+            </div>
+          </div>
 
-      <article>
-        <h3>Visi</h3>
-        <p>Menjadi penyedia jasa percetakan terpercaya dan pilihan utama masyarakat Medan dengan mengutamakan kualitas,
-          kecepatan, dan kepuasan pelanggan.</p>
-      </article>
+          <div class="tentang-text">
+            <div class="section-label">Profil Perusahaan</div>
+            <h2 id="profil-heading" class="section-title">Percetakan <span>Terpercaya</span><br>di Kota Medan</h2>
+            <div class="section-divider"></div>
+            <p>
+              Terang Printing adalah usaha percetakan yang berdiri sejak [--] di Medan,
+              Sumatera Utara. Kami berkomitmen memberikan layanan cetak berkualitas tinggi dengan
+              harga yang terjangkau untuk memenuhi berbagai kebutuhan pelanggan — dari mahasiswa,
+              pelajar, pelaku usaha, hingga instansi.
+            </p>
+            <p>
+              Dengan pengalaman lebih dari [-] tahun di industri percetakan, kami telah melayani
+              ribuan pelanggan dan terus berkembang menghadirkan layanan terbaik.
+            </p>
+            <a href="kontak.html" class="btn btn-primary">Hubungi Kami</a>
+          </div>
 
-      <article>
-        <h3>Misi</h3>
-        <ul>
-          <li>Menyediakan layanan cetak berkualitas tinggi dengan harga terjangkau.</li>
-          <li>Menggunakan peralatan cetak modern dan bahan baku terbaik.</li>
-          <li>Memberikan pelayanan yang ramah, cepat, dan profesional.</li>
-          <li>Terus berinovasi dalam menghadirkan solusi percetakan yang beragam.</li>
-          <li>Membangun hubungan jangka panjang yang saling menguntungkan dengan pelanggan.</li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- ===== SEJARAH ===== -->
-    <section aria-labelledby="sejarah-heading">
-      <h2 id="sejarah-heading">Perjalanan Kami</h2>
-
-      <ol>
-        <li>
-          <time datetime="20XX">[Tahun Berdiri]</time>
-          <p>Terang Printing didirikan dengan satu mesin cetak dan tekad melayani kebutuhan percetakan warga sekitar.
-          </p>
-        </li>
-        <li>
-          <time datetime="20XX">[Tahun]</time>
-          <p>Menambah layanan fotokopi dan penjualan alat tulis kantor (ATK).</p>
-        </li>
-        <li>
-          <time datetime="20XX">[Tahun]</time>
-          <p>Memperluas layanan ke cetak spanduk, banner, dan undangan.</p>
-        </li>
-        <li>
-          <time datetime="20XX">[Tahun]</time>
-          <p>Hadir secara online melalui website untuk menjangkau lebih banyak pelanggan.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===== TIM ===== -->
-    <section aria-labelledby="tim-heading">
-      <h2 id="tim-heading">Tim Kami</h2>
-
-      <ul>
-        <li>
-          <article>
-            <img src="tim/pemilik.jpg" alt="Foto Pemilik" />
-            <h3>[Nama Pemilik]</h3>
-            <p>Pemilik &amp; Pendiri</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="tim/operator.jpg" alt="Foto Operator" />
-            <h3>[Nama Operator]</h3>
-            <p>Operator Mesin Cetak</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <img src="tim/desainer.jpg" alt="Foto Desainer" />
-            <h3>[Nama Desainer]</h3>
-            <p>Desainer Grafis</p>
-          </article>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
     <!-- ===== STATISTIK ===== -->
-    <section aria-labelledby="statistik-heading">
-      <h2 id="statistik-heading">Terang Printing dalam Angka</h2>
-      <ul>
-        <li>
-          <strong>--</strong>
-          <span>Pelanggan Puas</span>
-        </li>
-        <li>
-          <strong>[X] Tahun</strong>
-          <span>Pengalaman</span>
-        </li>
-        <li>
-          <strong>--</strong>
-          <span>Jenis Layanan</span>
-        </li>
-        <li>
-          <strong>--</strong>
-          <span>Proyek Selesai</span>
-        </li>
-      </ul>
+    <div class="stats-strip" aria-labelledby="statistik-heading">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num">--</div>
+            <div class="stat-label">Pelanggan Puas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">--</div>
+            <div class="stat-label">Tahun Pengalaman</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">--</div>
+            <div class="stat-label">Jenis Layanan</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">--</div>
+            <div class="stat-label">Proyek Selesai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== VISI & MISI ===== -->
+    <section class="section section--gray" aria-labelledby="visi-misi-heading">
+      <div class="container">
+        <div class="section-label">Apa yang kami perjuangkan</div>
+        <h2 id="visi-misi-heading" class="section-title">Visi &amp; <span>Misi</span></h2>
+        <div class="section-divider"></div>
+
+        <div class="visi-misi-grid">
+          <div class="vm-card visi">
+            <h3>🎯 Visi</h3>
+            <p>
+              Menjadi penyedia jasa percetakan terpercaya dan pilihan utama masyarakat Medan
+              dengan mengutamakan kualitas, kecepatan, dan kepuasan pelanggan.
+            </p>
+          </div>
+          <div class="vm-card misi">
+            <h3>🚀 Misi</h3>
+            <ul>
+              <li>Menyediakan layanan cetak berkualitas tinggi dengan harga terjangkau.</li>
+              <li>Menggunakan peralatan cetak modern dan bahan baku terbaik.</li>
+              <li>Memberikan pelayanan yang ramah, cepat, dan profesional.</li>
+              <li>Terus berinovasi dalam menghadirkan solusi percetakan yang beragam.</li>
+              <li>Membangun hubungan jangka panjang yang saling menguntungkan dengan pelanggan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEJARAH ===== -->
+    <section class="section" aria-labelledby="sejarah-heading">
+      <div class="container">
+        <div class="section-label">Perjalanan kami</div>
+        <h2 id="sejarah-heading" class="section-title">Sejarah <span>Terang Printing</span></h2>
+        <div class="section-divider"></div>
+
+        <div class="timeline" style="max-width: 600px;">
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true">1</div>
+            <div class="timeline-content">
+              <h4><time datetime="20XX">[Tahun Berdiri]</time></h4>
+              <p>Terang Printing didirikan dengan satu mesin cetak dan tekad melayani kebutuhan percetakan warga
+                sekitar.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true">2</div>
+            <div class="timeline-content">
+              <h4><time datetime="20XX">[Tahun]</time></h4>
+              <p>Menambah layanan fotokopi dan penjualan alat tulis kantor (ATK).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true">3</div>
+            <div class="timeline-content">
+              <h4><time datetime="20XX">[Tahun]</time></h4>
+              <p>Memperluas layanan ke cetak spanduk, banner, dan undangan.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true">4</div>
+            <div class="timeline-content">
+              <h4><time datetime="20XX">[Tahun]</time></h4>
+              <p>Hadir secara online melalui website untuk menjangkau lebih banyak pelanggan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TIM ===== -->
+    <section class="section section--gray" aria-labelledby="tim-heading">
+      <div class="container">
+        <div class="section-label">Orang-orang di baliknya</div>
+        <h2 id="tim-heading" class="section-title">Tim <span>Kami</span></h2>
+        <div class="section-divider"></div>
+
+        <div class="tim-grid">
+          <div class="tim-card">
+            <!-- Ganti pemilik.jpg dengan foto sebenarnya -->
+            <img src="tim/pemilik.jpg" alt="Foto Pemilik" class="tim-avatar" />
+            <h3>[Nama Pemilik]</h3>
+            <p>Pemilik &amp; Pendiri</p>
+          </div>
+          <div class="tim-card">
+            <img src="tim/operator.jpg" alt="Foto Operator" class="tim-avatar" />
+            <h3>[Nama Operator]</h3>
+            <p>Operator Mesin Cetak</p>
+          </div>
+          <div class="tim-card">
+            <img src="tim/desainer.jpg" alt="Foto Desainer" class="tim-avatar" />
+            <h3>[Nama Desainer]</h3>
+            <p>Desainer Grafis</p>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2026 Terang Printing.</p>
-    <address>
-      Jl. Rela No.119, Kec. Medan Tembung, Kota Medan, Sumatera Utara<br />
-      Telp: <a href="tel:+6281234567890">0812-3456-7890</a><br />
-      Email: <a href="mailto:contoh@email.com">contoh@email.com</a>
-    </address>
-    <nav aria-label="Navigasi Footer">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Terang Printing</div>
+          <p class="footer-desc">Solusi cetak dan print terpercaya di Medan, Sumatera Utara. Melayani kebutuhan
+            percetakan dengan kualitas terbaik.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <address>
+            Jl. Rela No.119, Sidorejo, Medan<br />
+            Sumatera Utara<br />
+            <a href="tel:+6281234567890">0812-3456-7890</a><br />
+            <a href="mailto:contoh@gmail.com">contoh@gmail.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Terang Printing.</p>
+      </div>
+    </div>
   </footer>
 
 </body>

@@ -4,182 +4,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
   <title>Terang Printing - Layanan</title>
   <meta name="description"
     content="Layanan percetakan Terang Printing - cetak skripsi, spanduk, banner, print & fotokopi." />
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/layanan.css" />
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
 
-  <!-- ===== HEADER / NAVIGASI ===== -->
+  <!-- ===== HEADER ===== -->
   <header>
-    <div class="brand">
-      <img src="logo.png" alt="Logo Terang Printing" />
-      <h1>Terang Printing</h1>
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Logo Terang Printing" />
+        <a href="index.html"><span class="brand-name">Terang <span>Printing</span></span></a>
+      </div>
+      <nav aria-label="Navigasi Utama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html" aria-current="page">Layanan</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav aria-label="Navigasi Utama">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="layanan.html" aria-current="page">Layanan</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
 
-    <!-- ===== PAGE TITLE ===== -->
-    <section aria-labelledby="page-title">
-      <h2 id="page-title">Layanan Kami</h2>
-      <p>Kami menyediakan berbagai layanan percetakan dan jasa cetak untuk kebutuhan pribadi, akademik, maupun bisnis
-        Anda.</p>
-    </section>
+    <!-- ===== PAGE BANNER ===== -->
+    <div class="page-banner">
+      <div class="container">
+        <h1>Layanan Kami</h1>
+        <p>Berbagai layanan percetakan untuk kebutuhan pribadi, akademik, dan bisnis Anda.</p>
+      </div>
+    </div>
 
     <!-- ===== DAFTAR LAYANAN ===== -->
+    <section class="section" aria-label="Daftar Layanan">
+      <div class="container">
 
-    <!-- Layanan 1: Cetak Skripsi -->
-    <section id="skripsi" aria-labelledby="skripsi-heading">
-      <h2 id="skripsi-heading">Cetak Skripsi &amp; Karya Tulis</h2>
-      <p>Layanan cetak dan jilid untuk skripsi, tesis, disertasi, laporan PKL, makalah, dan karya tulis ilmiah lainnya.
-      </p>
-      <ul>
-        <li>Jilid softcover dan hardcover</li>
-        <li>Kertas HVS 70gr, 80gr</li>
-        <li>Cetak hitam putih dan berwarna</li>
-        <li>Laminasi glossy dan doff</li>
-      </ul>
-      <table>
-        <caption>Daftar Harga Cetak Skripsi</caption>
-        <thead>
-          <tr>
-            <th scope="col">Jenis</th>
-            <th scope="col">Spesifikasi</th>
-            <th scope="col">Harga</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cetak HVS B/W</td>
-            <td>Per lembar, 80gr</td>
-            <td>Rp 500</td>
-          </tr>
-          <tr>
-            <td>Cetak HVS Warna</td>
-            <td>Per lembar, 80gr</td>
-            <td>Rp 1.500</td>
-          </tr>
-          <tr>
-            <td>Jilid Softcover</td>
-            <td>Termasuk cover</td>
-            <td>Rp 15.000</td>
-          </tr>
-          <tr>
-            <td>Jilid Hardcover</td>
-            <td>Termasuk cover</td>
-            <td>Rp 50.000</td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="kontak.html">Pesan Layanan Ini</a>
-    </section>
+        <!-- Layanan 1: Cetak Skripsi -->
+        <div class="layanan-card" id="skripsi">
+          <div class="layanan-card-header">
+            <div class="icon" aria-hidden="true">📄</div>
+            <h2>Cetak Skripsi &amp; Karya Tulis</h2>
+          </div>
+          <div class="layanan-card-body">
+            <p>Layanan cetak dan jilid untuk skripsi, tesis, disertasi, laporan PKL, makalah, dan karya tulis ilmiah
+              lainnya.</p>
+            <div class="layanan-features">
+              <span class="layanan-feature-tag">Jilid Softcover</span>
+              <span class="layanan-feature-tag">Jilid Hardcover</span>
+              <span class="layanan-feature-tag">Kertas HVS</span>
+              <span class="layanan-feature-tag">Cetak B/W &amp; Warna</span>
+              <span class="layanan-feature-tag">Laminasi Glossy/Lux &amp; Doff</span>
+            </div>
+            <table class="price-table">
+              <caption class="sr-only">Daftar Harga Cetak Skripsi</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Jenis</th>
+                  <th scope="col">Spesifikasi</th>
+                  <th scope="col">Harga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cetak HVS B/W</td>
+                  <td>Per lembar</td>
+                  <td>Rp --</td>
+                </tr>
+                <tr>
+                  <td>Cetak HVS Warna</td>
+                  <td>Per lembar</td>
+                  <td>Rp --</td>
+                </tr>
+                <tr>
+                  <td>Jilid Softcover</td>
+                  <td>Termasuk cover</td>
+                  <td>Rp --</td>
+                </tr>
+                <tr>
+                  <td>Jilid Hardcover</td>
+                  <td>Termasuk cover</td>
+                  <td>Rp --</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="kontak.html" class="btn btn-primary">Pesan Layanan Ini</a>
+          </div>
+        </div>
 
-    <!-- Layanan 2: Spanduk & Banner -->
-    <section id="spanduk" aria-labelledby="spanduk-heading">
-      <h2 id="spanduk-heading">Cetak Spanduk &amp; Banner</h2>
-      <p>Layanan cetak spanduk, banner, backdrop, dan roll-up banner untuk berbagai keperluan promosi dan acara.</p>
-      <ul>
-        <li>Bahan flexi korea dan frontlite</li>
-        <li>Ukuran custom sesuai kebutuhan</li>
-        <li>Warna tajam dan tahan lama</li>
-        <li>Finishing dengan mata ayam atau tanpa</li>
-      </ul>
-      <table>
-        <caption>Daftar Harga Spanduk</caption>
-        <thead>
-          <tr>
-            <th scope="col">Produk</th>
-            <th scope="col">Bahan</th>
-            <th scope="col">Harga</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spanduk</td>
-            <td>Flexi Korea, per meter persegi</td>
-            <td>Rp 20.000</td>
-          </tr>
-          <tr>
-            <td>Banner Frontlite</td>
-            <td>Per meter persegi</td>
-            <td>Rp 25.000</td>
-          </tr>
-          <tr>
-            <td>Roll-up Banner</td>
-            <td>Termasuk stand</td>
-            <td>Rp 150.000</td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="kontak.html">Pesan Layanan Ini</a>
-    </section>
+        <!-- Layanan 2: Spanduk & Banner -->
+        <div class="layanan-card" id="spanduk">
+          <div class="layanan-card-header">
+            <div class="icon" aria-hidden="true">🖼️</div>
+            <h2>Cetak Spanduk &amp; Banner</h2>
+          </div>
+          <div class="layanan-card-body">
+            <p>Layanan cetak spanduk, banner, backdrop, dan roll-up banner untuk berbagai keperluan promosi dan acara.
+            </p>
+            <div class="layanan-features">
+              <span class="layanan-feature-tag">Bahan Flexi Korea</span>
+              <span class="layanan-feature-tag">Frontlite</span>
+              <span class="layanan-feature-tag">Ukuran Custom</span>
+              <span class="layanan-feature-tag">Warna Tajam &amp; Tahan Lama</span>
+              <span class="layanan-feature-tag">Finishing Mata Ayam</span>
+            </div>
+            <table class="price-table">
+              <caption class="sr-only">Daftar Harga Spanduk</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Produk</th>
+                  <th scope="col">Bahan</th>
+                  <th scope="col">Harga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Spanduk</td>
+                  <td>Flexi Korea, per m²</td>
+                  <td>Rp --</td>
+                </tr>
+                <tr>
+                  <td>Banner Frontlite</td>
+                  <td>Per m²</td>
+                  <td>Rp --</td>
+                </tr>
+                <tr>
+                  <td>Roll-up Banner</td>
+                  <td>Termasuk stand</td>
+                  <td>Rp --</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="kontak.html" class="btn btn-primary">Pesan Layanan Ini</a>
+          </div>
+        </div>
 
-    <!-- Layanan 3: Print & Fotokopi -->
-    <section id="print" aria-labelledby="print-heading">
-      <h2 id="print-heading">Print &amp; Fotokopi</h2>
-      <p>Layanan cetak dokumen (print) dan fotokopi cepat untuk berbagai kebutuhan dokumen harian Anda.</p>
-      <ul>
-        <li>Print A4, F4, A3</li>
-        <li>Hitam putih dan berwarna</li>
-        <li>Fotokopi cepat dan ekonomis</li>
-        <li>Scan dokumen ke PDF/JPG</li>
-      </ul>
-      <a href="kontak.html">Pesan Layanan Ini</a>
-    </section>
+        <!-- Layanan 3: Print & Fotokopi -->
+        <div class="layanan-card" id="print">
+          <div class="layanan-card-header">
+            <div class="icon" aria-hidden="true">🖨️</div>
+            <h2>Print &amp; Fotokopi</h2>
+          </div>
+          <div class="layanan-card-body">
+            <p>Layanan cetak dokumen (print) dan fotokopi cepat untuk berbagai kebutuhan dokumen harian Anda.</p>
+            <div class="layanan-features">
+              <span class="layanan-feature-tag">Print A4 / F4 / A3</span>
+              <span class="layanan-feature-tag">Hitam Putih &amp; Warna</span>
+              <span class="layanan-feature-tag">Fotokopi Cepat &amp; Ekonomis</span>
+              <span class="layanan-feature-tag">Scan ke PDF / JPG</span>
+            </div>
+            <a href="kontak.html" class="btn btn-primary">Pesan Layanan Ini</a>
+          </div>
+        </div>
 
-    <!-- Layanan 4: Undangan & Kartu -->
-    <section id="undangan" aria-labelledby="undangan-heading">
-      <h2 id="undangan-heading">Undangan &amp; Kartu</h2>
-      <p>Cetak undangan pernikahan, ulang tahun, kartu nama, kartu ucapan, dan berbagai jenis kartu lainnya.</p>
-      <ul>
-        <li>Desain custom atau gunakan template</li>
-        <li>Berbagai pilihan bahan kertas</li>
-        <li>Minimum order: 50 lembar</li>
-        <li>Finishing laminasi, emboss, dan spot UV</li>
-      </ul>
-      <a href="kontak.html">Pesan Layanan Ini</a>
+        <!-- Layanan 4: Undangan & Kartu -->
+        <div class="layanan-card" id="undangan">
+          <div class="layanan-card-header">
+            <div class="icon" aria-hidden="true">💌</div>
+            <h2>Undangan &amp; Kartu</h2>
+          </div>
+          <div class="layanan-card-body">
+            <p>Cetak undangan pernikahan, ulang tahun, kartu nama, kartu ucapan, dan berbagai jenis kartu lainnya.</p>
+            <div class="layanan-features">
+              <span class="layanan-feature-tag">Desain Custom / Template</span>
+              <span class="layanan-feature-tag">Berbagai Bahan Kertas</span>
+              <span class="layanan-feature-tag">Min. Order 50 Lembar</span>
+              <span class="layanan-feature-tag">Laminasi &amp; Emboss</span>
+              <span class="layanan-feature-tag">Spot UV</span>
+            </div>
+            <a href="kontak.html" class="btn btn-primary">Pesan Layanan Ini</a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ===== CTA ===== -->
-    <section aria-labelledby="cta-layanan">
-      <h2 id="cta-layanan">Butuh Layanan Lain?</h2>
-      <p>Konsultasikan kebutuhan cetak Anda kepada kami. Kami siap membantu!</p>
-      <a href="kontak.html">Hubungi Kami</a>
+    <section class="cta-banner" aria-labelledby="cta-layanan">
+      <div class="container">
+        <h2 id="cta-layanan">Butuh Layanan Lain?</h2>
+        <p>Konsultasikan kebutuhan cetak Anda kepada kami. Kami siap membantu!</p>
+        <div class="cta-banner-actions">
+          <a href="kontak.html" class="btn btn-outline">Hubungi Kami</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2026 Terang Printing. Semua hak dilindungi.</p>
-    <address>
-      Jl. Rela No.119, Kec. Medan Tembung, Kota Medan, Sumatera Utara<br />
-      Telp: <a href="tel:+6281234567890">0812-3456-7890</a><br />
-      Email: <a href="mailto:contoh@email.com">contoh@email.com</a>
-    </address>
-    <nav aria-label="Navigasi Footer">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="layanan.html">Layanan</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Terang Printing</div>
+          <p class="footer-desc">Solusi cetak dan print terpercaya di Medan, Sumatera Utara. Melayani kebutuhan
+            percetakan dengan kualitas terbaik.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <address>
+            Jl. Rela No.119, Sidorejo, Medan<br />
+            Sumatera Utara<br />
+            <a href="tel:+6281234567890">0812-3456-7890</a><br />
+            <a href="mailto:contoh@gmail.com">contoh@gmail.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Terang Printing.</p>
+      </div>
+    </div>
   </footer>
 
 </body>
