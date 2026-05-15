@@ -1,0 +1,242 @@
+/* =============================================
+   TERANG PRINTING — tentang.css
+   Berisi: gaya khusus halaman Tentang Kami (tentang.html)
+   Pastikan global.css sudah di-link sebelum file ini.
+============================================= */
+
+
+/* ── PROFIL PERUSAHAAN ───────────────────────────────────────
+   Layout dua kolom: foto toko di kiri, teks profil di kanan.
+─────────────────────────────────────────────────────────── */
+
+/* Grid dua kolom — foto | teks */
+.tentang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Wrapper foto toko — dibutuhkan untuk badge "10+ Tahun" */
+.tentang-img-wrapper { position: relative; }
+
+/* Kotak foto toko — tinggi tetap, gambar di-crop agar pas */
+.tentang-img-box {
+  background: var(--clr-yellow); /* latar kuning jika foto belum ada */
+  border-radius: 12px;
+  overflow: hidden;
+  height: 360px;
+}
+/* Foto toko mengisi penuh kotak tanpa distorsi */
+.tentang-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop tengah agar pas di kotak */
+  display: block;
+}
+
+/* Badge "10+ Tahun Berpengalaman" menempel di pojok foto */
+.tentang-img-badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--clr-black);
+  color: var(--clr-white);
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-weight: 800;
+}
+/* Angka besar berwarna kuning di badge */
+.tentang-img-badge span {
+  display: block;
+  font-size: var(--fs-xl);
+  color: var(--clr-yellow);
+}
+
+/* Teks profil di sebelah kanan foto */
+.tentang-text h2 { font-size: var(--fs-xl); font-weight: 800; margin-bottom: 16px; }
+.tentang-text p   { color: var(--clr-gray-dark); margin-bottom: 16px; font-size: var(--fs-md); }
+
+
+/* ── VISI & MISI ─────────────────────────────────────────────
+   Dua kartu berdampingan: visi (aksen kuning) & misi (aksen hitam).
+─────────────────────────────────────────────────────────── */
+
+/* Grid dua kolom untuk visi dan misi */
+.visi-misi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Base kartu visi/misi */
+.vm-card {
+  background: var(--clr-white);
+  border: 1.5px solid var(--clr-border);
+  border-radius: 10px;
+  padding: 28px;
+}
+/* Kartu visi — aksen kuning di atas */
+.vm-card.visi { border-top: 4px solid var(--clr-yellow); }
+/* Kartu misi — aksen hitam di atas */
+.vm-card.misi { border-top: 4px solid var(--clr-black); }
+
+.vm-card h3 { font-size: var(--fs-md); font-weight: 800; margin-bottom: 12px; }
+.vm-card p  { font-size: var(--fs-sm); color: var(--clr-gray-dark); line-height: 1.7; }
+
+/* Daftar poin misi */
+.vm-card ul { padding-left: 0; }
+.vm-card ul li {
+  padding: 6px 0 6px 20px;  /* indentasi untuk ikon panah */
+  border-bottom: 1px solid var(--clr-border);
+  position: relative;
+  font-size: var(--fs-sm);
+  color: var(--clr-gray-dark);
+  line-height: 1.7;
+}
+.vm-card ul li:last-child { border-bottom: none; }
+/* Ikon panah kuning di kiri tiap poin misi */
+.vm-card ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--clr-yellow);
+  font-weight: 800;
+}
+
+
+/* ── STRIP STATISTIK ─────────────────────────────────────────
+   Bar horizontal berlatar hitam berisi angka-angka statistik.
+─────────────────────────────────────────────────────────── */
+
+/* Latar hitam memanjang penuh lebar layar */
+.stats-strip {
+  background: var(--clr-black);
+  padding: 48px 0;
+}
+
+/* Grid 4 kolom statistik */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Satu item statistik — angka besar + label kecil */
+.stat-item {
+  text-align: center;
+  padding: 24px;
+  border-right: 1px solid #2a2a2a; /* garis pemisah antar item */
+}
+.stat-item:last-child { border-right: none; }
+
+/* Angka statistik besar berwarna kuning */
+.stat-num { font-size: 2.4rem; font-weight: 800; color: var(--clr-yellow); }
+
+/* Label kecil di bawah angka */
+.stat-label {
+  font-size: var(--fs-xs);
+  color: #888;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* ── TIMELINE SEJARAH ────────────────────────────────────────
+   Daftar vertikal perjalanan sejarah perusahaan.
+   Setiap item: lingkaran bernomor + judul + deskripsi.
+─────────────────────────────────────────────────────────── */
+.timeline { padding-left: 0; }
+
+/* Satu item timeline */
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+/* Lingkaran kuning berisi nomor urut */
+.timeline-dot {
+  width: 40px;
+  height: 40px;
+  background: var(--clr-yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: var(--fs-xs);
+  flex-shrink: 0; /* tidak mengecil */
+  color: var(--clr-black);
+}
+
+.timeline-content h4 { font-weight: 700; margin-bottom: 4px; }
+.timeline-content p  { font-size: var(--fs-sm); color: var(--clr-gray); }
+
+
+/* ── TIM KAMI ────────────────────────────────────────────────
+   Grid 3 kartu tim berisi foto, nama, dan jabatan.
+─────────────────────────────────────────────────────────── */
+
+/* Grid 3 kolom tim */
+.tim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Kartu anggota tim */
+.tim-card {
+  background: var(--clr-white);
+  border: 1.5px solid var(--clr-border);
+  border-radius: 10px;
+  padding: 28px;
+  text-align: center;
+}
+
+/* Foto tim — bulat, ukuran tetap */
+.tim-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover; /* crop tengah agar pas di lingkaran */
+  display: block;
+  margin: 0 auto 16px;
+  background: var(--clr-gray-light); /* latar saat foto belum ada */
+}
+
+.tim-card h3 { font-weight: 700; margin-bottom: 4px; }
+.tim-card p  { font-size: var(--fs-sm); color: var(--clr-gray); }
+
+
+/* ── RESPONSIVE TENTANG ──────────────────────────────────────
+─────────────────────────────────────────────────────────── */
+
+/* Tablet — statistik jadi 2 kolom */
+@media (max-width: 1024px) {
+  .stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .stat-item   { border-right: none; border-bottom: 1px solid #2a2a2a; }
+  .stat-item:last-child { border-bottom: none; }
+}
+
+/* Ponsel */
+@media (max-width: 768px) {
+  /* Profil jadi 1 kolom, badge disembunyikan */
+  .tentang-grid      { grid-template-columns: 1fr; }
+  .tentang-img-badge { display: none; }
+
+  /* Visi misi jadi 1 kolom */
+  .visi-misi-grid { grid-template-columns: 1fr; }
+
+  /* Tim jadi 2 kolom */
+  .tim-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Ponsel kecil — tim & statistik jadi 1 kolom */
+@media (max-width: 480px) {
+  .tim-grid   { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,124 @@
+/* =============================================
+   TERANG PRINTING — layanan.css
+   Berisi: gaya khusus halaman Layanan (layanan.html)
+   Pastikan global.css sudah di-link sebelum file ini.
+============================================= */
+
+
+/* ── KARTU LAYANAN ───────────────────────────────────────────
+   Setiap layanan ditampilkan dalam card dengan header hitam
+   dan body putih berisi deskripsi, fitur, tabel harga, & tombol.
+─────────────────────────────────────────────────────────── */
+
+/* Pembungkus satu kartu layanan */
+.layanan-card {
+  background: var(--clr-white);
+  border: 1.5px solid var(--clr-border);
+  border-radius: 10px;
+  overflow: hidden;     /* memotong sudut header */
+  margin-bottom: 40px;  /* jarak antar kartu */
+  box-shadow: var(--shadow);
+}
+
+/* Header kartu — berlatar hitam, berisi ikon + judul */
+.layanan-card-header {
+  background: var(--clr-black);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Kotak ikon kuning di header kartu */
+.layanan-card-header .icon {
+  font-size: 1.8rem;
+  width: 52px;
+  height: 52px;
+  background: var(--clr-yellow);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Judul layanan berwarna putih */
+.layanan-card-header h2 {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--clr-white);
+}
+
+/* Body kartu — berisi konten layanan */
+.layanan-card-body { padding: 32px; }
+.layanan-card-body p { color: var(--clr-gray-dark); margin-bottom: 20px; }
+
+
+/* ── TAG FITUR LAYANAN ───────────────────────────────────────
+   Pill/badge kuning yang menampilkan fitur-fitur layanan.
+─────────────────────────────────────────────────────────── */
+
+/* Wrapper deretan tag fitur */
+.layanan-features {
+  display: flex;
+  flex-wrap: wrap; /* pindah baris jika tidak muat */
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+/* Satu tag fitur berbentuk pill */
+.layanan-feature-tag {
+  background: var(--clr-yellow);
+  color: var(--clr-black);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+
+
+/* ── TABEL HARGA ─────────────────────────────────────────────
+   Tabel daftar harga di dalam kartu layanan.
+   Header tabel berlatar hitam, baris bergantian.
+─────────────────────────────────────────────────────────── */
+.price-table {
+  width: 100%;
+  border-collapse: collapse; /* hapus celah antar sel */
+  margin-bottom: 24px;
+  font-size: var(--fs-sm);
+}
+
+/* Header tabel — latar hitam, teks putih */
+.price-table th {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+}
+/* Kolom harga rata kanan */
+.price-table th:last-child { text-align: right; }
+
+/* Sel data tabel */
+.price-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--clr-border);
+}
+/* Kolom harga tebal dan rata kanan */
+.price-table td:last-child { text-align: right; font-weight: 700; }
+
+/* Hapus garis di baris terakhir */
+.price-table tr:last-child td { border-bottom: none; }
+
+/* Highlight baris saat di-hover */
+.price-table tr:hover td { background: var(--clr-gray-light); }
+
+
+/* ── RESPONSIVE LAYANAN ──────────────────────────────────────
+─────────────────────────────────────────────────────────── */
+
+/* Ponsel — padding kartu lebih kecil */
+@media (max-width: 768px) {
+  .layanan-card-header { padding: 20px; }
+  .layanan-card-body   { padding: 20px; }
+}

@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* =============================================
+   TERANG PRINTING — global.css
+   Berisi: variabel warna & font, reset, utilitas,
+           tombol, header, footer, page-banner,
+           banner CTA, dan responsive global.
+
+   File ini di-link di SEMUA halaman HTML.
+   =============================================
+
+   CARA EDIT CEPAT
+   ---------------
+   Warna kuning utama   → --clr-yellow
+   Warna teks utama     → --clr-black
+   Warna abu-abu terang → --clr-gray-light
+   Ukuran font body     → --fs-base
+   Lebar konten maks    → --max-w
+   Jarak antar section  → .section { padding }
+============================================= */
+
+
+/* ── ROOT VARIABLES ─────────────────────────────────────────
+   Semua warna dan ukuran font didefinisikan di sini.
+   Cukup ubah nilai di bawah untuk mengubah tampilan global.
+─────────────────────────────────────────────────────────── */
+:root {
+  /* Warna utama */
+  --clr-yellow      : #FFD600;   /* kuning cerah — warna aksen utama */
+  --clr-yellow-dark : #E6C000;   /* kuning gelap — untuk hover tombol */
+  --clr-black       : #111111;   /* hitam — teks utama & latar gelap */
+  --clr-gray-dark   : #333333;   /* abu gelap — teks sekunder */
+  --clr-gray        : #666666;   /* abu tengah — deskripsi, label */
+  --clr-gray-light  : #F5F5F5;   /* abu terang — latar section alternating */
+  --clr-border      : #E0E0E0;   /* abu border — garis pembatas card */
+  --clr-white       : #FFFFFF;   /* putih — latar utama */
+
+  /* Ukuran font — skala konsisten dari xs sampai 2xl */
+  --fs-xs   : 0.75rem;    /* 12px — label kecil, tag */
+  --fs-sm   : 0.875rem;   /* 14px — teks body kecil, nav */
+  --fs-base : 1rem;       /* 16px — teks body standar */
+  --fs-md   : 1.125rem;   /* 18px — deskripsi, lead text */
+  --fs-lg   : 1.5rem;     /* 24px — judul kartu */
+  --fs-xl   : 2rem;       /* 32px — judul section */
+  --fs-2xl  : 2.75rem;    /* 44px — judul hero */
+
+  /* Utilitas */
+  --radius  : 6px;                          /* sudut tombol & elemen kecil */
+  --shadow  : 0 2px 12px rgba(0,0,0,0.08); /* bayangan halus untuk card */
+  --max-w   : 1100px;                       /* lebar maksimum konten */
+}
+
+
+/* ── RESET ──────────────────────────────────────────────────
+   Menghapus margin/padding bawaan browser agar tampilan
+   konsisten di semua browser.
+─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { scroll-behavior: smooth; }       /* scroll halus saat klik anchor */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: var(--fs-base);
+  color: var(--clr-black);
+  background: var(--clr-white);
+  line-height: 1.65;
+}
+img { display: block; max-width: 100%; } /* gambar tidak overflow container */
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+
+
+/* ── UTILITAS ────────────────────────────────────────────────
+   Kelas pembantu yang digunakan di semua halaman.
+─────────────────────────────────────────────────────────── */
+
+/* Membungkus konten agar tidak terlalu lebar di layar besar */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Pembungkus section dengan jarak atas-bawah standar */
+.section { padding: 72px 0; }
+
+/* Varian section dengan latar abu-abu terang (section alternating) */
+.section--gray { background: var(--clr-gray-light); }
+
+/* Label kecil di atas judul section, seperti "Apa yang kami tawarkan" */
+.section-label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-gray);
+  margin-bottom: 8px;
+}
+
+/* Judul utama section */
+.section-title {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--clr-black);
+  line-height: 1.2;
+}
+/* Kata berwarna kuning di dalam judul section */
+.section-title span { color: var(--clr-yellow); }
+
+/* Garis kuning pendek di bawah judul section */
+.section-divider {
+  width: 48px;
+  height: 4px;
+  background: var(--clr-yellow);
+  margin: 16px 0 32px;
+  border-radius: 2px;
+}
+
+
+/* ── TOMBOL (BUTTONS) ────────────────────────────────────────
+   Tiga varian tombol: kuning (utama), outline hitam, outline putih.
+   Tambahkan kelas .btn beserta varian-nya ke elemen <a> atau <button>.
+─────────────────────────────────────────────────────────── */
+
+/* Base tombol — dipakai bersama varian di bawah */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  border: 2px solid transparent;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+
+/* Tombol kuning — untuk aksi utama (CTA primer) */
+.btn-primary {
+  background: var(--clr-yellow);
+  color: var(--clr-black);
+  border-color: var(--clr-yellow);
+}
+.btn-primary:hover {
+  background: var(--clr-yellow-dark);
+  border-color: var(--clr-yellow-dark);
+}
+
+/* Tombol outline hitam — untuk aksi sekunder di latar terang */
+.btn-outline {
+  background: transparent;
+  color: var(--clr-black);
+  border-color: var(--clr-black);
+}
+.btn-outline:hover {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+
+/* Tombol outline putih — untuk aksi sekunder di latar gelap (hero) */
+.btn-outline-white {
+  background: transparent;
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+}
+.btn-outline-white:hover {
+  background: var(--clr-white);
+  color: var(--clr-black);
+}
+
+
+/* ── HEADER ──────────────────────────────────────────────────
+   Header sticky di atas layar, berisi logo dan navigasi.
+   Garis kuning di bawah header sebagai aksen warna utama.
+─────────────────────────────────────────────────────────── */
+header {
+  position: sticky;   /* tetap di atas saat halaman discroll */
+  top: 0;
+  z-index: 100;       /* di atas elemen lain */
+  background: var(--clr-white);
+  border-bottom: 3px solid var(--clr-yellow);
+  box-shadow: var(--shadow);
+}
+
+/* Flex container: logo di kiri, nav di kanan */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+/* Kelompok logo + nama brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo bulat di header */
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+/* Nama brand — "Terang Printing" */
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--clr-black);
+  letter-spacing: -0.01em;
+}
+/* Kata "Printing" berwarna kuning */
+.brand-name span { color: var(--clr-yellow); }
+
+/* Daftar menu navigasi */
+header nav ul {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+header nav ul li a {
+  display: block;
+  padding: 8px 16px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--clr-gray-dark);
+  border-radius: var(--radius);
+}
+header nav ul li a:hover {
+  color: var(--clr-black);
+  background: var(--clr-gray-light);
+}
+/* Halaman aktif ditandai dengan latar kuning */
+header nav ul li a[aria-current="page"] {
+  color: var(--clr-black);
+  background: var(--clr-yellow);
+}
+
+
+/* ── PAGE BANNER ─────────────────────────────────────────────
+   Banner kuning di bagian atas setiap halaman (kecuali beranda).
+   Berisi judul halaman dan deskripsi singkat.
+─────────────────────────────────────────────────────────── */
+.page-banner {
+  background: var(--clr-yellow);
+  padding: 48px 0;
+  border-bottom: 3px solid var(--clr-yellow-dark);
+}
+.page-banner h1 {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--clr-black);
+}
+.page-banner p {
+  font-size: var(--fs-md);
+  color: var(--clr-gray-dark);
+  margin-top: 8px;
+  max-width: 560px;
+}
+
+
+/* ── BANNER CTA ──────────────────────────────────────────────
+   Banner kuning berisi ajakan bertindak (Call to Action).
+   Dipakai di bagian bawah halaman Beranda, Layanan, dan Produk.
+─────────────────────────────────────────────────────────── */
+.cta-banner {
+  background: var(--clr-yellow);
+  padding: 64px 0;
+  text-align: center;
+}
+.cta-banner h2 { font-size: var(--fs-xl); font-weight: 800; color: var(--clr-black); margin-bottom: 12px; }
+.cta-banner p  { font-size: var(--fs-md); color: var(--clr-gray-dark); margin-bottom: 28px; }
+/* Wrapper tombol-tombol CTA — ditampilkan berdampingan */
+.cta-banner-actions { display: flex; gap: 12px; justify-content: center; }
+
+
+/* ── FOOTER ──────────────────────────────────────────────────
+   Footer berlatar hitam berisi info brand, navigasi, dan kontak.
+─────────────────────────────────────────────────────────── */
+footer {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  padding: 48px 0 24px;
+}
+
+/* Grid 3 kolom: brand | navigasi | kontak */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333;
+}
+
+/* Nama brand berwarna kuning di footer */
+.footer-brand-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--clr-yellow);
+  margin-bottom: 12px;
+}
+
+/* Deskripsi singkat footer */
+.footer-desc {
+  font-size: var(--fs-sm);
+  color: #aaa;
+  line-height: 1.7;
+}
+
+/* Judul kolom footer (Navigasi, Kontak) */
+.footer-col h4 {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--clr-yellow);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Daftar link navigasi footer */
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a { font-size: var(--fs-sm); color: #bbb; }
+.footer-col ul li a:hover { color: var(--clr-yellow); }
+
+/* Alamat & kontak di footer */
+.footer-col address {
+  font-style: normal;
+  font-size: var(--fs-sm);
+  color: #bbb;
+  line-height: 1.9;
+}
+.footer-col address a { color: #bbb; }
+.footer-col address a:hover { color: var(--clr-yellow); }
+
+/* Baris copyright paling bawah */
+.footer-bottom {
+  padding-top: 24px;
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: #666;
+}
+
+
+/* ── RESPONSIVE GLOBAL ───────────────────────────────────────
+   Penyesuaian layout untuk layar tablet dan ponsel.
+   Responsive spesifik per halaman ada di masing-masing file css.
+─────────────────────────────────────────────────────────── */
+
+/* Tablet (maks 768px) */
+@media (max-width: 768px) {
+  /* Header berubah jadi vertikal di layar kecil */
+  .header-inner { flex-direction: column; height: auto; padding: 12px 0; gap: 12px; }
+  header nav ul { flex-wrap: wrap; justify-content: center; }
+
+  /* Footer jadi 1 kolom */
+  .footer-grid { grid-template-columns: 1fr; }
+
+  /* Jarak section lebih kecil di mobile */
+  .section { padding: 48px 0; }
+  .page-banner { padding: 32px 0; }
+}
