@@ -25,6 +25,9 @@
         <img src="logo.png" alt="Logo Terang Printing" />
         <a href="index.html"><span class="brand-name">Terang <span>Printing</span></span></a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav aria-label="Navigasi Utama">
         <ul>
           <li><a href="index.html">Beranda</a></li>
@@ -36,6 +39,15 @@
       </nav>
     </div>
   </header>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      const header = this.closest('header');
+      const isOpen = header.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Tutup Menu Navigasi' : 'Buka Menu Navigasi');
+    });
+  </script>
 
   <main>
 
@@ -173,34 +185,6 @@
               <h4><time datetime="20XX">[Tahun]</time></h4>
               <p>Hadir secara online melalui website untuk menjangkau lebih banyak pelanggan.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TIM ===== -->
-    <section class="section section--gray" aria-labelledby="tim-heading">
-      <div class="container">
-        <div class="section-label">Orang-orang di baliknya</div>
-        <h2 id="tim-heading" class="section-title">Tim <span>Kami</span></h2>
-        <div class="section-divider"></div>
-
-        <div class="tim-grid">
-          <div class="tim-card">
-            <!-- Ganti pemilik.jpg dengan foto sebenarnya -->
-            <img src="tim/pemilik.jpg" alt="Foto Pemilik" class="tim-avatar" />
-            <h3>[Nama Pemilik]</h3>
-            <p>Pemilik &amp; Pendiri</p>
-          </div>
-          <div class="tim-card">
-            <img src="tim/operator.jpg" alt="Foto Operator" class="tim-avatar" />
-            <h3>[Nama Operator]</h3>
-            <p>Operator Mesin Cetak</p>
-          </div>
-          <div class="tim-card">
-            <img src="tim/desainer.jpg" alt="Foto Desainer" class="tim-avatar" />
-            <h3>[Nama Desainer]</h3>
-            <p>Desainer Grafis</p>
           </div>
         </div>
       </div>

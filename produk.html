@@ -25,6 +25,9 @@
         <img src="logo.png" alt="Logo Terang Printing" />
         <a href="index.html"><span class="brand-name">Terang <span>Printing</span></span></a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <nav aria-label="Navigasi Utama">
         <ul>
           <li><a href="index.html">Beranda</a></li>
@@ -36,6 +39,15 @@
       </nav>
     </div>
   </header>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      const header = this.closest('header');
+      const isOpen = header.classList.toggle('nav-open');
+      this.setAttribute('aria-expanded', isOpen);
+      this.setAttribute('aria-label', isOpen ? 'Tutup Menu Navigasi' : 'Buka Menu Navigasi');
+    });
+  </script>
 
   <main>
 
@@ -73,7 +85,7 @@
                 <h3>Pulpen Ballpoint</h3>
                 <p>Merek: Pilot, Snowman, Kenko, dll.</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -86,7 +98,7 @@
                 <h3>Pensil 2B</h3>
                 <p>Untuk ujian dan menggambar teknik</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -97,9 +109,9 @@
               </div>
               <div class="produk-card-body">
                 <h3>Stapler &amp; Isi Stapler</h3>
-                <p>Berbagai ukuran untuk keperluan kantor</p>
+                <p>Untuk keperluan kantor</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -112,7 +124,7 @@
                 <h3>Map &amp; Folder Dokumen</h3>
                 <p>Map plastik, kertas, dan snelhecter</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -133,7 +145,7 @@
                 <h3>Kertas HVS A4</h3>
                 <p>70gr &amp; 80gr, per rim (00 lembar)</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -146,7 +158,7 @@
                 <h3>Kertas Foto (Photo Paper)</h3>
                 <p>Glossy &amp; matte, ukuran A4 dan 4R</p>
                 <div class="produk-price">Rp 00 – 00 / lembar</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -155,7 +167,7 @@
 
         <!-- Kategori: Produk Cetak -->
         <div id="produk-cetak">
-          <h2 class="produk-section-title">Produk Cetak Siap Pakai</h2>
+          <h2 class="produk-section-title">Produk Siap Pakai</h2>
           <div class="produk-grid">
 
             <div class="produk-card">
@@ -167,7 +179,7 @@
                 <h3>Buku Nota / Kwitansi</h3>
                 <p>Berbagai ukuran, rangkap 2 dan 3</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -180,7 +192,33 @@
                 <h3>Stiker Label</h3>
                 <p>Untuk pengiriman dan administrasi</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
+              </div>
+            </div>
+
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/gantungan-kunci.jpg" alt="Gantungan Kunci"
+                  onerror="this.style.display='none';this.parentNode.textContent='🏷️'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Gantungan Kunci</h3>
+                <p>Gantungan kunci unik dan lucu lucu</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
+              </div>
+            </div>
+
+            <div class="produk-card">
+              <div class="produk-card-img">
+                <img src="produk/bingkai-foto.jpg" alt="Bingkai Foto"
+                  onerror="this.style.display='none';this.parentNode.textContent='🖼️'" />
+              </div>
+              <div class="produk-card-body">
+                <h3>Bingkai Foto</h3>
+                <p> Tersedia berbagai ukuran dan model</p>
+                <div class="produk-price">Rp 00 – 00</div>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -201,7 +239,7 @@
                 <h3>Buku Tulis</h3>
                 <p>Berbagai merek dan ukuran untuk siswa</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
@@ -214,7 +252,7 @@
                 <h3>Penggaris &amp; Jangka</h3>
                 <p>30cm, 60cm, jangka dan busur derajat</p>
                 <div class="produk-price">Rp 00 – 00</div>
-                <a href="kontak.html" class="btn btn-outline">Tanya Stok</a>
+                <div class="btn btn-outline" style="background-color: black; color: white; border-color: black; cursor: default;">Ready</div>
               </div>
             </div>
 
