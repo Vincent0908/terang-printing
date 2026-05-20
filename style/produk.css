@@ -74,26 +74,27 @@
 
 /* ── AREA GAMBAR PRODUK ──────────────────────────────────────
    Area gambar di bagian atas card produk.
-   Gambar selalu penuh lebar dan tinggi mengikuti proporsi aslinya
-   sehingga gambar tidak terpotong dan tidak distorsi.
+   Tinggi tetap agar semua card seragam. Gambar otomatis
+   di-crop (object-fit: cover) sehingga tidak distorsi.
 ─────────────────────────────────────────────────────────── */
 
-/* Wrapper gambar — tinggi minimum 140px, bisa bertambah */
+/* Wrapper gambar — tinggi tetap untuk semua card */
 .produk-card-img {
-  min-height: 140px;
-  background: var(--clr-gray-light); /* latar abu saat gambar belum load */
+  height: 220px;
+  background: var(--clr-white);
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--clr-border);
   overflow: hidden;
-  font-size: 3rem; /* ukuran emoji fallback jika gambar tidak ada */
+  font-size: 3rem;
 }
 
-/* Gambar produk — lebar penuh, tinggi otomatis mengikuti proporsi */
+/* Gambar produk — diregangkan mengisi penuh container */
 .produk-card-img img {
-  width: 100%;   /* mengisi penuh lebar container */
-  height: auto;  /* tinggi menyesuaikan proporsi asli gambar */
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* mengisi penuh container, mengikuti ukuran container */
   display: block;
 }
 
@@ -126,20 +127,151 @@
 }
 
 
+/* ── SECTION "MASIH BANYAK LAGI" ────────────────────────────
+   Section yang menampilkan produk/layanan lain yang belum
+   tercantum di katalog, beserta CTA untuk menghubungi.
+─────────────────────────────────────────────────────────── */
+
+.more-products-section {
+  background: var(--clr-gray-light);
+}
+
+.more-products-wrapper {
+  background: var(--clr-white);
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1.5px solid var(--clr-border);
+}
+
+/* Header text */
+.more-products-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.more-products-header .section-label {
+  display: block;
+}
+.more-products-header .section-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+.more-products-desc {
+  font-size: var(--fs-base);
+  color: var(--clr-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid item lainnya — 4 kolom */
+.more-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* Setiap item */
+.more-item {
+  background: var(--clr-gray-light);
+  border: 1.5px solid var(--clr-border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+.more-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--clr-yellow);
+}
+
+/* Icon emoji */
+.more-item-icon {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+.more-item:hover .more-item-icon {
+  transform: scale(1.15);
+}
+
+.more-item h3 {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--clr-black);
+  margin-bottom: 6px;
+}
+.more-item p {
+  font-size: var(--fs-xs);
+  color: var(--clr-gray);
+  line-height: 1.5;
+}
+
+/* Item terakhir — "Dan Lainnya..." dengan aksen kuning */
+.more-item-cta {
+  background: var(--clr-yellow);
+  border-color: var(--clr-yellow-dark);
+}
+.more-item-cta:hover {
+  border-color: var(--clr-yellow-dark);
+  background: var(--clr-yellow-dark);
+}
+.more-item-cta h3 {
+  color: var(--clr-black);
+}
+.more-item-cta p {
+  color: var(--clr-gray-dark);
+}
+
+/* CTA bar di bawah grid */
+.more-products-cta {
+  background: var(--clr-black);
+  border-radius: 12px;
+  padding: 32px 40px;
+  text-align: center;
+}
+.more-products-cta > p {
+  font-size: var(--fs-md);
+  color: var(--clr-white);
+  margin-bottom: 20px;
+}
+.more-products-cta > p strong {
+  color: var(--clr-yellow);
+}
+.more-products-cta-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 /* ── RESPONSIVE PRODUK ───────────────────────────────────────
 ─────────────────────────────────────────────────────────── */
 
 /* Tablet — 3 kolom */
 @media (max-width: 1024px) {
   .produk-grid { grid-template-columns: repeat(3, 1fr); }
+  .more-products-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* Ponsel besar — 2 kolom */
 @media (max-width: 768px) {
   .produk-grid { grid-template-columns: repeat(2, 1fr); }
+  .more-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .more-products-wrapper { padding: 32px 24px; }
+  .more-products-cta { padding: 24px 20px; }
 }
 
 /* Ponsel kecil — 1 kolom */
 @media (max-width: 480px) {
   .produk-grid { grid-template-columns: 1fr; }
+  .more-products-grid { grid-template-columns: 1fr; }
+  .more-products-wrapper { padding: 24px 16px; }
+  .more-products-cta-actions { flex-direction: column; align-items: center; }
 }
+
