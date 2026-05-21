@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr; /* kanan sedikit lebih lebar untuk form */
   gap: 48px;
+  align-items: start; /* kedua kolom mengikuti tinggi kontennya masing-masing */
 }
 
 
@@ -86,8 +87,13 @@
   border: 1.5px solid var(--clr-border);
   border-radius: 10px;
   overflow: hidden;  /* memotong sudut iframe */
-  margin-top: 32px;
-  height: 240px;     /* ubah nilai ini untuk tinggi peta yang berbeda */
+  margin-top: 24px;
+  height: 400px;     /* lebih besar karena sekarang full-width */
+}
+
+/* Section peta full-width */
+.section--map {
+  background: var(--clr-gray-light, #f8f8f8);
 }
 
 /* Iframe mengisi penuh kotak map-box */
@@ -111,6 +117,7 @@
   border-radius: 12px;
   padding: 36px;
   box-shadow: var(--shadow);
+  align-self: start; /* tidak stretch ke tinggi kolom kiri */
 }
 .kontak-form-box h2 { font-size: var(--fs-lg); font-weight: 800; margin-bottom: 8px; }
 .kontak-form-box > p { font-size: var(--fs-sm); color: var(--clr-gray); margin-bottom: 28px; }
