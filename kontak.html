@@ -156,7 +156,7 @@
             <h2>Kirim Pesan</h2>
             <p>Isi formulir di bawah ini dan kami akan segera merespons.</p>
 
-            <form action="#" method="POST" novalidate>
+            <form id="kontakForm" novalidate>
 
               <div class="form-row">
                 <div class="form-group">
@@ -195,11 +195,9 @@
                   placeholder="Tuliskan detail kebutuhan Anda di sini..."></textarea>
               </div>
 
-              <button type="submit" class="btn-submit">Kirim Pesan →</button>
-
+              <button type="submit" class="btn-submit">Kirim via WhatsApp 💬</button>
             </form>
           </div>
-
         </div>
       </div>
     </section>
@@ -257,5 +255,40 @@
   </footer>
 
 </body>
+<script>
+  document.getElementById('kontakForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Ambil nilai dari form
+    const nama = document.getElementById('nama').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telepon = document.getElementById('telepon').value.trim();
+    const keperluanSelect = document.getElementById('keperluan');
+    const keperluanText = keperluanSelect.options[keperluanSelect.selectedIndex].text;
+    const keperluanValue = keperluanSelect.value;
+    const pesan = document.getElementById('pesan').value.trim();
+
+    // Validasi field wajib
+    if (!nama) { alert('Mohon isi nama lengkap Anda.'); document.getElementById('nama').focus(); return; }
+    if (!email) { alert('Mohon isi alamat email Anda.'); document.getElementById('email').focus(); return; }
+    if (!keperluanValue) { alert('Mohon pilih keperluan Anda.'); document.getElementById('keperluan').focus(); return; }
+    if (!pesan) { alert('Mohon isi pesan Anda.'); document.getElementById('pesan').focus(); return; }
+
+    // Susun pesan WhatsApp
+    let waMessage = `Halo Terang Printing! 👋\n\n`;
+    waMessage += `*Nama:* ${nama}\n`;
+    waMessage += `*Email:* ${email}\n`;
+    if (telepon) waMessage += `*Telepon:* ${telepon}\n`;
+    waMessage += `*Keperluan:* ${keperluanText}\n`;
+    waMessage += `\n*Pesan:*\n${pesan}`;
+
+    // Nomor WhatsApp Terang Printing
+    const waNumber = '6282368906010';
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
+
+    // Buka WhatsApp
+    window.open(waUrl, '_blank');
+  });
+</script>
 
 </html>
